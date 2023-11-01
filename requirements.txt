@@ -46,10 +46,10 @@ threadpoolctl==3.2.0
 torch==2.1.0
 torchvision==0.16.0
 tqdm==4.66.1
-typer==0.9.0
+typer
 typing_extensions==4.8.0
 urllib3==2.0.7
-wasabi==1.1.2
+wasabi
 weasel==0.3.3
 Werkzeug==3.0.1
 zipp==3.17.0
