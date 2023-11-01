@@ -9,7 +9,6 @@ install
 itsdangerous
 Jinja2
 nltk==3.8.1
-numpy
 packaging
 Pillow
 regex==2023.10.3
