@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+	<div id="project-description">
+		<img src="{{ url_for('static', filename='images/HG_logo.png') }}" style="width:45%; padding-bottom:20px;">
+		<h1>Welcome friend! I'd like to introduce<br> <img src="{{ url_for('static', filename='images/icons8-robot-64.png') }}" style="height:40px;"> Arty, the Hourglass Chatbot</h1><br>
+		<p>Arty is part of a project by Hourglass Collaborative as an ongoing exploriation and research effort into the power of Generative AI to drive better customer experiences and business outcomes.</p><br>
+		<p>You can learn more about the project here: <a href="https://medium.com/@tjshannon/sharing-the-technical-side-of-our-business-687ce1c7e0ea" target="_blank">Learn More</a></p><br>
+		<hr>
+		<h2>About Arty</h2><br>
+		<p>Arty is a closed-domain retrieval-based chatbot. This means that Arty uses Natural Language Processing (NLP) to understand what you say, and then pairs the intent of your question with the best possible answer.<br><br> Arty will pull the best possible answer from a document library called the "Hourglass Knowledge Hub." In other words, Arty uses AI to understand you, but cannot generate unique responses all on their own.</p><br>
+		<p>To learn more about how this implemented, visit this link: <a href="https://hourglasscollaborative.com" target="_blank">https://hourglasscollaborative.com</a></p><br>
+		<p>Though Arty cannot generate it's own responses and relies on the Knowledge Hub, other chatbots in this series will be able to do that. We'll be using Retrieval-Augmented and Generative Models later on, so stay tuned.</p>
+		<hr>
+		<h2>Ask Arty A Question</h2><br>
+		<p>Arty is eager to meet you. Click on the heart in the bottom right corner to start a chat with Arty.</p><br>
+		<p>Arty is designed to help you learn more about Hourglass Collaborative. So you can ask things like:</p>
+		<ul>
+			<li>
+				Tell me more about Hourglass Collaborative.
+			</li>
+			<li>
+				What kind of services do you offer?
+			</li>
+			<li>
+				Tell me more about the team.
+			</li>
+		</ul>
+
+	</div>
+	<div id="arrow">
+		<img src="{{ url_for('static', filename='images/arrow.svg') }}" style="width:45%; padding-bottom:20px;">
+	</div>
+
+	<div class="container">
+	    <div class="chatbox">
+	        <div class="chatbox__support">
+	            <div class="chatbox__header">
+	                <div class="chatbox__image--header">
+	                    <img src="{{ url_for('static', filename='images/icons8-robot-64.png') }}" alt="image">
+	                </div>
+	                <div class="chatbox__content--header">
+	                    <h4 class="chatbox__heading--header">Arty, the Hourglass Chatbot</h4>
+	                    <p class="chatbox__description--header">Hi. My name is Arty, how can I help you?</p>
+	                </div>
+	            </div>
+	            <div class="chatbox__messages">
+	                <div></div>
+	            </div>
+	            <div class="chatbox__footer">
+	                <input type="text" placeholder="Write a message...">
+	                <button class="chatbox__send--footer send__button">Send</button>
+	            </div>
+	        </div>
+	        <div class="chatbox__button">
+	            <button><img src="{{ url_for('static', filename='images/heart.svg') }}" /></button>
+	        </div>
+	    </div>
+	</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <!-- Start of HubSpot Embed Code -->
+	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/40000357.js"></script>
+	<!-- End of HubSpot Embed Code -->
+
+</body>
+
+</html>
